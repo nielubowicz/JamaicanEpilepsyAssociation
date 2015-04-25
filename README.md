@@ -5,4 +5,4 @@ We aim to provide educational information to the Jamaican population at large, a
 survey information from patients and caretakers.
 
 ## API keys
-You (I) will need to open a (Twilio Account)[http://twilio.com]. Api keys should be placed in the file `api.keys`, in JSON format.
+You (I) will need to open a [Twilio Account](http://twilio.com). Api keys should be placed in the file `api.keys`, in JSON format.
