@@ -13,11 +13,13 @@ $json_a = json_decode($string, true);
 $FromNumber = $json_a['from'];
 $ToNumber = $json_a['to'];
 
-$message = $client->account->messages->sendMessage(
-  $FromNumber, // From a valid Twilio number
-  $ToNumber, // Text this number
-  "Jamaican Epilepsy Association, Erie!"
-);
+foreach ($ToNumber as $recipientPhoneNumber) { 
+  $message = $client->account->messages->sendMessage(
+    $FromNumber, // From a valid Twilio number
+    $recipientPhoneNumber, // Text this number
+    "Hello from the Jamaican Epilepsy Association!"
+  );
+}
 
 header('Location: ' . $_SERVER['HTTP_REFERER'])
 ?>

@@ -19,11 +19,14 @@ foreach ($choices as $key => $value) {
   $questionString .= "\n" . "Press " . $key . " for '" . $value . "'.";
 }
 
-$message = $client->account->messages->sendMessage(
-  $FromNumber, // From a valid Twilio number
-  $ToNumber, // Text this number
-  $questionString
+
+foreach ($ToNumber as $recipientPhoneNumber) { 
+  $message = $client->account->messages->sendMessage(
+    $FromNumber, // From a valid Twilio number
+    $ToNumber, // Text this number
+    $questionString
   );
+}
 
 header('Location: ' . $_SERVER['HTTP_REFERER'])
 ?>
