@@ -1,5 +1,5 @@
 <?php
-require "../php/twilio-php-master/Services/Twilio.php";
+require "../../php/twilio-php-master/Services/Twilio.php";
 require_once "authenticate.php";
 require_once "survey-question.php";
  
@@ -19,7 +19,7 @@ if (count($responses) == 1) {
 } else if (isset($responses[$digit])) {
   $say = $responses[$digit];
 } else if (strcasecmp($digit,'SIGNUP') == 0){
-  $say = "Thank you for signing up with Mash Mash"; 
+  $say = "Thank you for signing up with epicentral"; 
   $isSignup = 1;
 } else {
   $say = "I didn't understand your response.";
@@ -40,7 +40,7 @@ if ($isSignup == 0) {
 } else {
   $knownNumbers = $json_a["to"];
   if (in_array($ToNumber, $knownNumbers)) {
-    $say = "You're already signed up with Mash Mash";
+    $say = "You're already signed up with epicentral";
   } else {
     array_push($knownNumbers, $ToNumber);
     $json_a["to"] = $knownNumbers;
