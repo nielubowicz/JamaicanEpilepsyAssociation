@@ -6,6 +6,8 @@ require_once "survey-question.php";
 global $AccountSid;
 global $AuthToken;
 
+$phoneNumberFile = "numbers.live";
+
 $client = new Services_Twilio($AccountSid, $AuthToken);
 
 $isSignup = 0;
@@ -24,7 +26,7 @@ if (count($responses) == 1) {
   // TODO: send survey again
 }
 
-$string = file_get_contents("test.numbers");
+$string = file_get_contents($phoneNumberFile);
 $json_a = json_decode($string, true);
 
 $FromNumber = $json_a['from'];
@@ -42,7 +44,7 @@ if ($isSignup == 0) {
   } else {
     array_push($knownNumbers, $ToNumber);
     $json_a["to"] = $knownNumbers;
-    file_put_contents("test.numbers",json_encode($json_a));
+    file_put_contents($phoneNumberFile,json_encode($json_a));
   }
   $message = $client->account->messages->sendMessage(
     $FromNumber, // From a valid Twilio number
