@@ -1,0 +1,9 @@
+<?php
+# JamaicanEpilepsyAssociation Config
+    $SQL_JEA_CONFIG = [
+        "servername" => "XXXXXXXXX",
+        "username" => "XXXXXXXX",
+        "password" => "XXXXXXXXX",
+        "db" => "XXXXXXXXXXXXXX",
+    ];
+?>

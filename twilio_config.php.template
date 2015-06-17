@@ -1,0 +1,7 @@
+<?php
+#JamaicanEpilepsyAssociation Config
+    $TWILIO_JEA_CONFIG = [
+        "AccountSid" => "XXXXXXXXXXXX", 
+        "AuthToken" => "XXXXXXXXXXXX",
+    ];
+?>

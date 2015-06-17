@@ -1,5 +1,4 @@
-api.keys.live
-api.keys.test
+*_config.php
 
 numbers.live
 numbers.judges
