@@ -3,5 +3,6 @@
     $TWILIO_JEA_CONFIG = [
         "AccountSid" => "XXXXXXXXXXXX", 
         "AuthToken" => "XXXXXXXXXXXX",
+	"OutgoingNumber" => "+XXXXXXXXXX",
     ];
 ?>
