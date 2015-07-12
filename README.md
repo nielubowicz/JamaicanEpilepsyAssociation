@@ -1,4 +1,4 @@
-# SMS Education Client
+# EpiCentral - SMS Education Client
 
 ![Jamaican Epilepsy Logo](/images/JEALogo.jpg)
 
@@ -7,4 +7,4 @@ We aim to provide educational information to the Jamaican population at large, a
 survey information from patients and caretakers.
 
 ## Configuration 
-You will need to open a [Twilio Account](http://twilio.com). Api keys should be filled into `twilio_config.php` template and SQL credentials in the `sql_config.php` template.
+You will need to open a [Twilio Account](http://twilio.com). Api keys should be filled into `twilio_config.php` template and SQL credentials in the `sql_config.php` template. These config templates should be placed into `www/<your config directory>` that is referenced from your local `config.php`.
